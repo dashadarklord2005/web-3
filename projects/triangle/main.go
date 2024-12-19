@@ -1,7 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 func main() {
-	fmt.Println("Hello, world!!!")
+	// Ввод значений катетов a и b
+	var a, b float64
+	fmt.Scan(&a, &b)
+
+	// Вычисление гипотенузы по теореме Пифагора
+	c := math.Sqrt(a*a + b*b)
+
+	// Вывод результата
+	fmt.Println(c)
 }
