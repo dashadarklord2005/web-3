@@ -1,7 +1,23 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
+
+func addAsterisks(s string) string {
+	// Преобразуем строку в срез символов, а затем соединяем их через '*'
+	return strings.Join(strings.Split(s, ""), "*")
+}
 
 func main() {
-	fmt.Println("Hello, world!!!")
+	// Ввод строки
+	var inputStr string
+	fmt.Scanln(&inputStr)
+
+	// Получаем результат
+	result := addAsterisks(inputStr)
+
+	// Выводим результат
+	fmt.Println(result)
 }
